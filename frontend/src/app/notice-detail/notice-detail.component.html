@@ -1,0 +1,24 @@
+<div class="center_div">
+  <h3 class="text-center">Aviso</h3>
+<table class="table">
+    <tbody>
+      <tr>
+        <th scope="row">Título:</th>
+        <td>{{notice?.title}}</td>        
+      </tr>
+      <tr>
+        <th scope="row">Descrição</th>
+        <td>{{notice?.description}}</td>        
+      </tr>
+      <tr>
+        <th scope="row">Data de Publicação</th>
+        <td>{{notice?.publishDate  | date:"dd/MM/yyyy"}}</td>  
+      </tr>
+      <tr>
+        <th scope="row">Data de Visualização</th>
+        <td>{{notice?.visualizationDate  | date:"dd/MM/yyyy"}}</td>  
+      </tr>
+    </tbody>
+  </table>
+  <a class="btn btn-primary btn-block" [routerLink]="['']">Voltar</a>
+</div>

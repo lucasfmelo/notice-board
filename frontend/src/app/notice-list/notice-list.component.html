@@ -1,0 +1,57 @@
+<div class="center_div">
+  <h4 class="text-center pb-3">Mural de Avisos CERS</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><input type="checkbox" id="deleteAll" name="deleteAll" (change)="selectAllForDelete($event)"></th>
+        <th scope="col" class="text-center">Título</th>
+        <th scope="col" class="text-center">Descrição</th>
+        <th scope="col" class="text-center">Data de Publicação</th>
+        <th scope="col" class="text-center">Data de Visualização</th>
+        <th scope="col" class="text-center">
+          <button class="btn btn-primary btn-danger btn-sm me-1" title="Remover selecionados" (click)="deleteSelected()">
+            <i class="fa fa-minus-circle fa-1x" aria-hidden="true" ></i>
+          </button>
+          <button class="btn btn-primary btn-success btn-sm" title="Novo aviso" (click)="newRedirect()">
+            <i class="fa fa-plus-circle fa-1x" ></i>
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody *ngIf="notices.length > 0; else listaVazia">
+      <tr *ngFor="let notice of notices">
+        <th scope="row"> <input type="checkbox" id="deleteCheck" name="deleteCheck" [value]="notice.id" (change)="checkBoxSelected($event);"  /></th>
+        <td class="text-center">{{notice.title}}</td>
+        <td class="text-center">{{notice.description}}</td>
+        <td class="text-center">{{notice.publishDate | date:"dd/MM/yyyy"}}</td>
+        <td class="text-center">{{notice.visualizationDate | date:"dd/MM/yyyy"}}</td>
+        <td class="text-center"> <a [routerLink]="['/notices/', notice.id]"><i class="fa fa-edit fa-1x mx-1" aria-hidden="true" title="Editar"></i></a>
+          <a [routerLink]="['/notices/detail/', notice.id]"> <i class="fa fa-book fa-1x mx-1" aria-hidden="true" title="Details"></i> </a>
+          <a [routerLink]="" (click)="delete(notice)"><i class="fa fa-minus-square fa-1x mx-1" aria-hidden="true" title="Remover"></i></a>
+        </td>
+      </tr>
+    </tbody>    
+  </table>
+
+  <div class="d-flex justify-content-center">
+    <nav>
+      <ul class="pagination">
+        <li class="page-item"><button class="btn btn-primary" (click)="previousPage()"
+            [disabled]="!previousEnabled">Anterior</button></li>
+        <li class="page-item"><button class="btn btn-primary ms-2" (click)="nextPage()"
+            [disabled]="!nextEnabled">Próximo</button></li>
+      </ul>
+    </nav>
+  </div>
+
+  <ng-template #listaVazia>
+    <tbody>
+      <tr >
+        <td colspan="6" class="text-center ">
+          Nenhum aviso cadastrado no mural.
+        </td>
+      </tr>
+    </tbody>
+  </ng-template>
+
+</div>

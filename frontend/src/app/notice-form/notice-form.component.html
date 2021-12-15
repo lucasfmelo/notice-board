@@ -1,0 +1,32 @@
+<div class="center_div">
+    <h3 class="text-center">Aviso</h3>
+
+    <form #form="ngForm" class="form" [formGroup]="noticeForm" (submit)="insertOrUpdate()">
+        <div class="form-group">
+            <label for="title">Título</label>
+            <input placeholder="" class="form-control" formControlName="title" id="title" autofocus required />
+            <div *ngIf="noticeForm.get('title')?.errors?.required && noticeForm.get('title')?.touched">
+                <small>Título é obrigatório</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Descrição</label>
+            <input placeholder="" class="form-control" formControlName="description" />
+            <div *ngIf="noticeForm.get('description')?.errors?.required && noticeForm.get('description')?.touched">
+                <small>Descrição é obrigatória</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="publishDate">Data de Publicação</label>
+            <input placeholder="" class="form-control" formControlName="publishDate" type="date" />
+            <div colo *ngIf="noticeForm.get('publishDate')?.errors?.required && noticeForm.get('publishDate')?.touched">
+                <small>Data de publicação do aviso</small>
+            </div>
+        </div>
+        <p></p>
+
+        <button class="btn btn-primary btn-block "  [disabled]="noticeForm.invalid">OK</button>
+        <a class="btn btn-primary btn-block ms-2" [routerLink]="['']">Voltar</a>
+        
+    </form>
+</div>

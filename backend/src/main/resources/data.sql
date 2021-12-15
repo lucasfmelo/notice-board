@@ -1,0 +1,19 @@
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo A', 'Aviso A', TO_DATE('01/01/2021','dd/MM/yyyy'), TO_DATE('02/01/2021', 'dd/MM/yyyy'));
+
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo B', 'Aviso B', TO_DATE('02/02/2021','dd/MM/yyyy'), TO_DATE('03/02/2021', 'dd/MM/yyyy'));
+
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo C', 'Aviso C', TO_DATE('03/03/2021','dd/MM/yyyy'), TO_DATE('04/03/2021', 'dd/MM/yyyy'));
+
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo D', 'Aviso D', TO_DATE('04/04/2021','dd/MM/yyyy'), TO_DATE('05/04/2021', 'dd/MM/yyyy'));
+
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo E', 'Aviso E', TO_DATE('05/05/2021','dd/MM/yyyy'), TO_DATE('06/05/2021', 'dd/MM/yyyy'));
+
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo F', 'Aviso F', TO_DATE('06/06/2021','dd/MM/yyyy'), TO_DATE('07/06/2021', 'dd/MM/yyyy'));
+
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo G', 'Aviso G', TO_DATE('07/07/2021','dd/MM/yyyy'), TO_DATE('08/07/2021', 'dd/MM/yyyy'));
+
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo H', 'Aviso H', TO_DATE('08/08/2021','dd/MM/yyyy'), TO_DATE('09/08/2021', 'dd/MM/yyyy'));
+
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo I', 'Aviso I', TO_DATE('09/09/2021','dd/MM/yyyy'), TO_DATE('10/09/2021', 'dd/MM/yyyy'));
+
+INSERT INTO NOTICE VALUES (NEXTVAL('SEQ_NOTICE'), 'Titulo J', 'Aviso J', TO_DATE('10/10/2021','dd/MM/yyyy'), TO_DATE('11/10/2021', 'dd/MM/yyyy'));
