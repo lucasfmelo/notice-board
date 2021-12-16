@@ -12,14 +12,14 @@
 ## Geração da build do Backend
 
 ```
-cd lab-backend
+cd backend
 .\mvnw.cmd clean package
 ```
 
 ## Geração da build do Frontend
 
 ```
-cd ../lab-frontend
+cd ../frontend
 npm install
 npm run build
 ```
@@ -27,13 +27,13 @@ npm run build
 ## Executando o Backend
 
 ```
-cd lab-backend
+cd backend
 java -jar .\target\noticeboard.jar
 ```
 
 ## Executando o Frontend
 
 ```
-cd ../lab-frontend
+cd ../frontend
 ng serve
 ```
