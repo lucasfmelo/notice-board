@@ -16,24 +16,22 @@ cd backend
 .\mvnw.cmd clean package
 ```
 
-## Geração da build do Frontend
-
-```
-cd ../frontend
-npm install
-npm run build
-```
-
 ## Executando o Backend
 
 ```
-cd backend
 java -jar .\target\noticeboard.jar
+```
+
+## Geração da build do Frontend
+
+```
+cd frontend
+npm install
+npm run build
 ```
 
 ## Executando o Frontend
 
 ```
-cd ../frontend
 ng serve
 ```
